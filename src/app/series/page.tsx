@@ -1,12 +1,17 @@
+'use client'
+
 import Link from "next/link";
+import { useState } from "react";
 
 
 export default function SeriesPage() {
 
+    const [name,setName]=useState('Fatemeh')
+
     return (
         <>
             <Link href="/">Back</Link>
-            <h1>Series Page</h1>
+            <h1>Series Page:{name}</h1>
             <ul>
                 <li>
                     <Link href="/series/reactjs-course">ReactJs Course</Link>
