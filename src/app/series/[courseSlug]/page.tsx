@@ -2,6 +2,7 @@
 import { use } from "react";
 import BuyCourseButton from "../components/BuyCourseButton";
 import { redirect } from "next/navigation";
+import NotFound from "@/app/not-found";
 
 
 export default function SingleSeriePage({params}:{params:Promise<{courseSlug:string}>}) {
@@ -10,6 +11,11 @@ export default function SingleSeriePage({params}:{params:Promise<{courseSlug:str
 
     if (courseSlug.length<=1) {
         redirect('/')
+        
+    }
+    if (!['laravel-courseSlug','reactjs-course'].includes(courseSlug)) {
+
+        return NotFound();
         
     }
 
