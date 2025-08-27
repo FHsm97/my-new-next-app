@@ -13,11 +13,13 @@ export default function SingleSeriePage({params}:{params:Promise<{courseSlug:str
         redirect('/')
         
     }
-    if (!['laravel-courseSlug','reactjs-course'].includes(courseSlug)) {
+    if (!['laravel-course','reactjs-course'].includes(courseSlug)) {
 
         return NotFound();
         
     }
+
+    throw new Error('error')
 
 
 
