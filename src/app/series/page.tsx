@@ -1,12 +1,15 @@
 'use client'
 
 import Link from "next/link";
+import { permanentRedirect } from "next/navigation";
 import { useState } from "react";
 
 
 export default function SeriesPage() {
 
     const [name,setName]=useState('Fatemeh')
+
+    permanentRedirect('/articles')
 
     return (
         <>
