@@ -19,7 +19,7 @@ export default function SingleSeriePage({params}:{params:Promise<{courseSlug:str
         
     }
 
-    throw new Error('error')
+    // throw new Error('error')
 
 
 
