@@ -15,7 +15,7 @@ export default async function Page() {
     return (
         <>
 
-            <h1>Post Lists</h1>
+            <h1 className="font-bold text-blue-500">Post Lists</h1>
             <PostList/>
             
 
