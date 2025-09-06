@@ -1,0 +1,12 @@
+
+
+$primary-color: #64ff00;
+ 
+// :export {
+//   primaryColor: $primary-color;
+// } در این نسخه این روش ارور میده
+
+.postTitle{
+    text-decoration: underline;
+    color: $primary-color;
+}

@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import PostListStyles from './postList.module.scss'
 
 
 async function getPosts() {
@@ -26,7 +27,7 @@ export default async function PostList() {
             posts?.map((post: any) => (
                 <div key={post?.id}>
                     <Link href={`/posts/${post?.id}`}>
-                        <h2 className='text-red-300 underline'>title:{post?.title}</h2>
+                        <h2 className={PostListStyles.postTitle}>title:{post?.title}</h2>
                     </Link>
                     <br />
                     <hr />
