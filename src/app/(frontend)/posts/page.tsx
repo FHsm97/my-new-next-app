@@ -15,7 +15,7 @@ export default async function Page() {
     return (
         <>
 
-            <h1 style={{fontWeight:'bold'}}>لیست پست‌ها</h1>
+            <h1>لیست پست‌ها</h1>
             <PostList/>
             
 

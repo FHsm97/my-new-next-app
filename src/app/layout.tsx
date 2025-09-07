@@ -1,8 +1,8 @@
 
 import type { Metadata } from "next";
-import {  Vazirmatn } from "next/font/google";
+// import {  Vazirmatn } from "next/font/google";
 import "./globals.css";
-
+import localFont from 'next/font/local'
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -14,10 +14,29 @@ import "./globals.css";
 //   variable: "--font-geist-mono",
 //   subsets: ["latin"],
 // });
+//**S5-E2**//
+// const vazirmatn=Vazirmatn({
+//   subsets:['latin']
+// })
 
-const vazirmatn=Vazirmatn({
-  subsets:['latin']
+
+const vazirmatn = localFont({
+  src: [
+    {
+      path: './../fonts/vazirmatn/Vazirmatn-Thin.woff2',
+      weight: '100',
+      style: 'normal'
+    },
+    {
+      path: './../fonts/vazirmatn/Vazirmatn-Medium.woff2',
+      weight: '500',
+      style: 'normal'
+    }
+
+  ]
 })
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
