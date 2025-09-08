@@ -21,6 +21,7 @@ import localFont from 'next/font/local'
 
 
 const vazirmatn = localFont({
+  variable:'--font-vazirmatn',
   src: [
     {
       path: './../fonts/vazirmatn/Vazirmatn-Thin.woff2',
@@ -49,11 +50,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={vazirmatn.variable}>
       {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > */}
-      <body className={vazirmatn.className}>
+      <body className="font-vazir">
         {children}
       </body>
     </html>
