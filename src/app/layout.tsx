@@ -51,6 +51,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={vazirmatn.variable}>
+      <head>
+        <link href="https://vjs.zencdn.net/8.23.3/video-js.css" rel="stylesheet" />
+      </head>
       {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > */}
