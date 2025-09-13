@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.5.3",
     "next": "15.5.0",
     "next-nprogress-bar": "^2.4.7",
     "next-progress": "^2.3.1",

@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 async function getSinglePost(id: number) {
 
-    let res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
 
     if (!res.ok) {
         if (res.status == 404)
@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: Promise<{ id: number }>
     const { id } = await params;
     // console.log(id);
 
-    let post = await getSinglePost(id)
+    const post = await getSinglePost(id)
 
 
     return (
