@@ -1,7 +1,29 @@
+import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 
+
+
+type Props = {
+    params: Promise<{ id: number }>
+    // searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+
+
+export async function generateMetadata(
+    { params }: Props,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const { id } = await params;
+    const post = await getSinglePost(id)
+
+    return {
+        title: post.title,
+        description: post.body,
+    }
+}
 
 async function getSinglePost(id: number) {
 
@@ -23,7 +45,7 @@ async function getSinglePost(id: number) {
 
 
 
-export default async function Page({ params }: { params: Promise<{ id: number }> }) {
+export default async function Page({ params }: Props) {
     const { id } = await params;
     // console.log(id);
 
